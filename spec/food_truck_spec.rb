@@ -1,5 +1,7 @@
 require './lib/item'
 require './lib/food_truck'
+require 'pry'
+
 
 RSpec.describe FoodTruck do
   before(:each) do
