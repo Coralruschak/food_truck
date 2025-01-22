@@ -18,9 +18,13 @@ class Event
     return names
   end
 
-  def food_trucks_that_sell(item) ###The key :item will not exist in your hash, 
-    @food_trucks.find_all do |truck| #you should be looking for the key item
-      truck.inventory[:item] == item #(the argument that you are sending in to the method.
+  def food_trucks_that_sell(item)
+    trucks = []
+    @food_trucks.each do |truck|
+      if truck.inventory.include?(item)
+        trucks << truck
+      end
     end
+    return trucks
   end
 end
