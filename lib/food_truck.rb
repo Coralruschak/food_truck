@@ -23,6 +23,10 @@ class FoodTruck
   end  
   
   def potential_revenue
-    
+    total = 0
+    @inventory.each do |key, value|
+      total += key.price * value
+    end
+    return total
   end
 end
