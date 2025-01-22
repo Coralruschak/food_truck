@@ -10,11 +10,12 @@ class Event
     @food_trucks << truck
   end
 
-  def food_truck_names ###This is returning all food trucks because 
-    @food_trucks.each do |truck| #each returns the original array.
-      @names = []
-      @names << truck.name
+  def food_truck_names
+    names = []
+    @food_trucks.each do |truck|
+      names << truck.name
     end
+    return names
   end
 
   def food_trucks_that_sell(item) ###The key :item will not exist in your hash, 
